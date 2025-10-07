@@ -1,0 +1,14 @@
+# 기본 설정
+data_csv: ./data/evernote_export_parsed.csv
+outbox_dir: ./outbox
+min_similarity: 0.62      # 유사도 임계치 (0.58~0.68 사이에서 조절)
+mmr_lambda: 0.3           # 다양성(0=유사성만, 1=서로 다른 것만)
+per_topic_limit: 3        # 클러스터(토픽)당 최대 선택
+max_candidates: 800       # RSS 후보 상한
+send_limit: 60            # 하루 전송 상한(안전장치)
+
+# RSS 시드: 여기를 채우세요. 도메인별 주요 섹션 RSS를 넣으면 정확도가 오릅니다.
+rss_feeds:
+  - https://news.google.com/rss?hl=ko&gl=KR&ceid=KR:ko   # 예시: 조합 피드(실전은 개별 매체 RSS 권장)
+  # - https://example.com/rss
+  # - https://another.example.com/section/tech/rss

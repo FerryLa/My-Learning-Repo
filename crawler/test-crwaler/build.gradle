@@ -1,0 +1,42 @@
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '3.5.4'
+    id 'io.spring.dependency-management' version '1.1.7'
+}
+
+group = 'com.ocean'
+version = '0.0.1-SNAPSHOT'
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17)
+    }
+}
+
+configurations {
+    compileOnly {
+        extendsFrom annotationProcessor
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    compileOnly 'org.projectlombok:lombok'
+    annotationProcessor 'org.projectlombok:lombok'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+
+    implementation 'org.springdoc:springdoc-openapi-ui:1.6.14' // Spring Boot 애플리케이션에서 Swagger UI를 통해 OpenAPI(Swagger) 문서를 자동으로 생성, 시각화할 수 있게 해주는 라이브러리입니다.
+    implementation 'org.jsoup:jsoup:1.15.4' // HTML 파싱 및 웹 문서 스크래핑을 지원하는 자바 라이브러리로, HTML 데이터 추출 및 조작이 가능합니다.
+    runtimeOnly 'com.h2database:h2' // 인메모리(in-memory) 및 임베디드(embedded) 환경에서 사용할 수 있는 경량 관계형 데이터베이스로, 테스트 및 개발용으로 자주 사용됩니다.
+
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}

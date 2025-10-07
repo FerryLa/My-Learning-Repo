@@ -1,0 +1,12 @@
+requests
+feedparser
+beautifulsoup4
+lxml
+trafilatura
+numpy
+scikit-learn
+pandas
+pyyaml
+tqdm
+# optional fast path for embeddings; fallback로 TF-IDF가 작동하므로 없어도 됩니다.
+# sentence-transformers
