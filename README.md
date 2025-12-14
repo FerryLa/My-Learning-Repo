@@ -25,8 +25,8 @@
 ### 1. 저장소 클론
 
 ```bash
-git clone https://github.com/your-username/agent_bible.git
-cd agent_bible
+git clone https://github.com/HarryKane11/FC_Agent_bible.git
+cd FC_Agent_bible
 ```
 
 ### 2. 가상환경 생성 및 활성화
@@ -73,21 +73,33 @@ jupyter notebook
 
 ## 📚 실습 노트북
 
-| 노트북 | 설명 |
-|--------|------|
-| `langchain_rag_practice.ipynb` | LangChain을 활용한 RAG 구현 실습 |
-| `langgraph_rag_practice.ipynb` | LangGraph를 활용한 RAG 워크플로우 실습 |
+### Part 1. AI 에이전트 기초 다지기
+| 위치 | 노트북 | 설명 |
+|------|--------|------|
+| CH03 | `langchain_rag_practice.ipynb` | LangChain을 활용한 RAG 구현 실습 |
+| CH03 | `langgraph_rag_practice.ipynb` | LangGraph를 활용한 RAG 워크플로우 실습 |
+
+> 📌 Part 2, Part 3 실습 자료는 강의 진행에 따라 순차적으로 업데이트됩니다.
 
 ---
 
 ## 📁 프로젝트 구조
 
 ```
-agent_bible/
-├── docs/                           # 실습용 문서
-│   └── DeepSeek_OCR_paper.pdf
-├── langchain_rag_practice.ipynb    # LangChain RAG 실습
-├── langgraph_rag_practice.ipynb    # LangGraph RAG 실습
+FC_Agent_bible/
+├── Part 1. AI 에이전트 기초 다지기/
+│   └── CH03.LLM 어플리케이션의 기본, RAG/
+│       ├── docs/
+│       │   └── DeepSeek_OCR_paper.pdf
+│       ├── langchain_rag_practice.ipynb
+│       └── langgraph_rag_practice.ipynb
+├── Part 2. AI 에이전트 초간단 구현해보기/
+│   ├── CH02.노코드 기반의 프레임워크, n8n/
+│   ├── CH03.에이전트 PoC 최적의 프레임워크, OpenAI Agent SDK/
+│   └── CH04.프로덕션 수준의 프레임워크, Langgraph/
+├── Part 3. 멀티 에이전트 구조 정복하기/
+│   ├── CH02.Langgraph 기본 워크플로우 구현/
+│   └── CH03.Langgraph 통한 실제 AI 에이전트 서비스 따라하기/
 ├── requirements.txt                # 패키지 의존성
 ├── .env.example                    # 환경 변수 템플릿
 ├── .gitignore                      # Git 제외 파일
