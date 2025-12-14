@@ -29,7 +29,41 @@ git clone https://github.com/HarryKane11/FC_Agent_bible.git
 cd FC_Agent_bible
 ```
 
-### 2. 가상환경 생성 및 활성화
+### 2. 패키지 설치 (두 가지 방법 중 선택)
+
+#### 방법 A: ⚡ uv 사용 (권장 - 10배 이상 빠름!)
+
+[uv](https://github.com/astral-sh/uv)는 Rust로 작성된 초고속 Python 패키지 매니저입니다.
+
+**1) uv 설치:**
+```bash
+# Windows (PowerShell)
+powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
+
+# Mac/Linux
+curl -LsSf https://astral.sh/uv/install.sh | sh
+```
+
+**2) 가상환경 생성 및 패키지 설치 (한 번에!):**
+```bash
+uv venv
+uv pip install -r requirements.txt
+```
+
+**3) 가상환경 활성화:**
+```bash
+# Windows
+.venv\Scripts\activate
+
+# Mac/Linux
+source .venv/bin/activate
+```
+
+---
+
+#### 방법 B: 기존 pip 사용
+
+**1) 가상환경 생성 및 활성화:**
 
 **Windows:**
 ```bash
@@ -43,8 +77,7 @@ python -m venv venv
 source venv/bin/activate
 ```
 
-### 3. 패키지 설치
-
+**2) 패키지 설치:**
 ```bash
 pip install -r requirements.txt
 ```
@@ -76,8 +109,8 @@ jupyter notebook
 ### Part 1. AI 에이전트 기초 다지기
 | 위치 | 노트북 | 설명 |
 |------|--------|------|
-| CH03 | `langchain_rag_practice.ipynb` | LangChain을 활용한 RAG 구현 실습 |
-| CH03 | `langgraph_rag_practice.ipynb` | LangGraph를 활용한 RAG 워크플로우 실습 |
+| CH03 | `CH03.02.01.Langchain으로 구현하는 Basic RAG.ipynb` | LangChain을 활용한 RAG 구현 실습 |
+| CH03 | `CH03.02.02.Langgraph로 구현하는 Basic RAG.ipynb` | LangGraph를 활용한 RAG 워크플로우 실습 |
 
 > 📌 Part 2, Part 3 실습 자료는 강의 진행에 따라 순차적으로 업데이트됩니다.
 
@@ -91,8 +124,8 @@ FC_Agent_bible/
 │   └── CH03.LLM 어플리케이션의 기본, RAG/
 │       ├── docs/
 │       │   └── DeepSeek_OCR_paper.pdf
-│       ├── langchain_rag_practice.ipynb
-│       └── langgraph_rag_practice.ipynb
+│       ├── CH03.02.01.Langchain으로 구현하는 Basic RAG.ipynb
+│       └── CH03.02.02.Langgraph로 구현하는 Basic RAG.ipynb
 ├── Part 2. AI 에이전트 초간단 구현해보기/
 │   ├── CH02.노코드 기반의 프레임워크, n8n/
 │   ├── CH03.에이전트 PoC 최적의 프레임워크, OpenAI Agent SDK/
